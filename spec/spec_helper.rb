@@ -81,3 +81,5 @@ Datadog.configure do |c|
   c.ci.enabled = true
   c.ci.instrument :rspec
 end
+
+WebMock.disable_net_connect!(:allow_localhost => true, :allow => "citestcycle-intake.datadoghq.eu")
