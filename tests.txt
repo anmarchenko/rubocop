@@ -1,0 +1,9 @@
+sequential
+bundle exec rspec
+Finished in 1 minute 48 seconds (files took 3.34 seconds to load)
+21631 examples, 0 failures, 1 pending
+
+parallel
+parallel_rspec
+21631 examples, 0 failures, 1 pending
+Took 43 seconds

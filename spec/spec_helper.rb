@@ -10,6 +10,9 @@ require 'rubocop/server'
 
 require 'webmock/rspec'
 
+require "datadog/ci"
+require "ddtrace/auto_instrument"
+
 require_relative 'core_ext/string'
 
 begin
@@ -71,4 +74,10 @@ module ::RSpec
       end
     end
   end
+end
+
+Datadog.configure do |c|
+  c.service = "rubocop"
+  c.ci.enabled = true
+  c.ci.instrument :rspec
 end

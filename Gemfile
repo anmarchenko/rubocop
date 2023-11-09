@@ -29,6 +29,11 @@ group :test do
   # is merged and released. It's a workaround until then.
   gem 'bigdecimal', platform: :mri
   gem 'webmock', require: false
+
+  gem 'parallel_tests'
+
+  gem "datadog-ci", :path => "../datadog-ci-rb"
+  gem "ddtrace", :github => "DataDog/dd-trace-rb", :ref => "master"
 end
 
 local_ast = File.expand_path('../rubocop-ast', __dir__)

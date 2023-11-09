@@ -72,3 +72,4 @@ bin/*
 
 # For stackprof or others
 tmp/*
+test.rb
