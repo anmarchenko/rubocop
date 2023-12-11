@@ -80,6 +80,7 @@ Datadog.configure do |c|
   c.service = "rubocop"
   c.ci.enabled = true
   c.ci.instrument :rspec
+  c.ci.experimental_test_suite_level_visibility_enabled = true
 end
 
 WebMock.disable_net_connect!(:allow_localhost => true, :allow => "citestcycle-intake.datadoghq.eu")
