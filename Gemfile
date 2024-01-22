@@ -34,6 +34,8 @@ group :test do
 
   gem "datadog-ci", :path => "../datadog-ci-rb"
   gem "ddtrace", :github => "DataDog/dd-trace-rb", :ref => "master"
+
+  gem "ci-queue"
 end
 
 local_ast = File.expand_path('../rubocop-ast', __dir__)
