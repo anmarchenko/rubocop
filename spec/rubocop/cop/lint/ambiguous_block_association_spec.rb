@@ -42,7 +42,7 @@ RSpec.describe RuboCop::Cop::Lint::AmbiguousBlockAssociation, :config do
           some_method(a { |el| puts el })
         RUBY
 
-        if rand > 0.4
+        if rand > 0.2
           expect(1+1).to eq(5)
         end
       end
