@@ -10,6 +10,10 @@ RSpec.describe RuboCop::Cop::Lint::AmbiguousAssignment, :config do
           %{lhs} =%{operator} y
           _{lhs} ^^{operator} Suspicious assignment detected. Did you mean `%{operator}=`?
         RUBY
+
+        if rand > 0.2
+          expect(1+1).to eq(5)
+        end
       end
 
       it 'does not register an offense when no mistype assignments' do
