@@ -4,22 +4,28 @@
 require 'rainbow'
 Rainbow.enabled = false
 
-require 'rubocop'
-require 'rubocop/cop/internal_affairs'
-require 'rubocop/server'
-
+require 'simplecov' if ENV['COVERAGE']
 require 'webmock/rspec'
-
-require "datadog/ci"
-require "ddtrace/auto_instrument"
-
-require_relative 'core_ext/string'
 
 begin
   require 'pry'
 rescue LoadError
   # Pry is not activated.
 end
+
+require "datadog/ci"
+require "ddtrace/auto_instrument"
+
+Datadog.configure do |c|
+  c.service = "rubocop"
+  c.ci.enabled = true
+  c.ci.instrument :rspec
+end
+
+require 'rubocop'
+require 'rubocop/cop/internal_affairs'
+require 'rubocop/server'
+require_relative 'core_ext/string'
 
 # Require supporting files exposed for testing.
 require 'rubocop/rspec/support'
@@ -74,12 +80,6 @@ module ::RSpec
       end
     end
   end
-end
-
-Datadog.configure do |c|
-  c.service = "rubocop"
-  c.ci.enabled = true
-  c.ci.instrument :rspec
 end
 
 WebMock.disable_net_connect!(:allow_localhost => true, :allow => "citestcycle-intake.datadoghq.eu")
