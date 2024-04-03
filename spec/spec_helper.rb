@@ -14,11 +14,12 @@ rescue LoadError
 end
 
 require "datadog/ci"
-require "ddtrace/auto_instrument"
+require "datadog/auto_instrument"
 
 Datadog.configure do |c|
   c.service = "rubocop"
   c.ci.enabled = true
+  c.ci.itr_enabled = true
   c.ci.instrument :rspec
 end
 
@@ -82,4 +83,4 @@ module ::RSpec
   end
 end
 
-WebMock.disable_net_connect!(:allow_localhost => true, :allow => "citestcycle-intake.datadoghq.eu")
+WebMock.disable_net_connect!(:allow_localhost => true, :allow => /(datadoghq.eu)|(datad0g.com)/)

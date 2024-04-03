@@ -33,7 +33,7 @@ group :test do
   gem 'parallel_tests'
 
   gem "datadog-ci", :path => "../datadog-ci-rb"
-  gem "ddtrace", :github => "DataDog/dd-trace-rb", :ref => "master"
+  gem "datadog", :github => "DataDog/dd-trace-rb", :ref => "2.0"
 
   gem "ci-queue"
   gem "redis"
