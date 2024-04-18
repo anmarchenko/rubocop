@@ -30,6 +30,7 @@ RSpec.describe RuboCop::Options, :isolated_environment do
         begin
           options.parse(['--help'])
         rescue SystemExit # rubocop:disable Lint/SuppressedException
+          p "fd"
         end
 
         # rubocop:todo Naming/InclusiveLanguage
