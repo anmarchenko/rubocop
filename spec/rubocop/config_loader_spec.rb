@@ -148,6 +148,8 @@ RSpec.describe RuboCop::ConfigLoader do
         config['Enabled'] = false
 
 
+
+
         expect(configuration_from_file.to_h)
           .to eql(default_config.merge('Style/Encoding' => config))
       end
