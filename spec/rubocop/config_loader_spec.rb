@@ -146,6 +146,8 @@ RSpec.describe RuboCop::ConfigLoader do
       it 'returns a configuration inheriting from default.yml' do
         config = default_config['Style/Encoding'].dup
         config['Enabled'] = false
+
+
         expect(configuration_from_file.to_h)
           .to eql(default_config.merge('Style/Encoding' => config))
       end
