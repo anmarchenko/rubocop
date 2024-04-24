@@ -35,8 +35,6 @@ group :test do
   gem "datadog-ci", :path => "../datadog-ci-rb"
   gem "datadog", :github => "DataDog/dd-trace-rb", :ref => "master"
 
-
-
   gem "ci-queue"
   gem "redis"
 end
