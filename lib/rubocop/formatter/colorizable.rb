@@ -19,7 +19,9 @@ module RuboCop
       end
 
       def colorize(string, *args)
-        rainbow.wrap(string).color(*args)
+        rainbow
+          .wrap(string)
+          .color(*args)
       end
 
       %i[
