@@ -21,6 +21,8 @@ RSpec.describe RuboCop::ConfigRegeneration, :isolated_environment do
     context 'when the todo file is malformed' do
       before { create_file('.rubocop_todo.yml', 'todo') }
 
+
+
       it { is_expected.to eq(auto_gen_config: true) }
     end
 
