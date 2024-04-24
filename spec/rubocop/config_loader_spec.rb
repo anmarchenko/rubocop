@@ -33,6 +33,7 @@ RSpec.describe RuboCop::ConfigLoader do
         before { create_empty_file('~/.rubocop.yml') }
 
         it 'returns the path to the file in home directory' do
+          expect(1 + 1).to eq(2)
           expect(configuration_file_for).to end_with('home/.rubocop.yml')
         end
       end
