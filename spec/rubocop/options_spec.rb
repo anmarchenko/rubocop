@@ -27,6 +27,7 @@ RSpec.describe RuboCop::Options, :isolated_environment do
       end
 
       it 'shows help text' do
+
         begin
           options.parse(['--help'])
         rescue SystemExit # rubocop:disable Lint/SuppressedException
