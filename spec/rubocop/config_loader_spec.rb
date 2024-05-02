@@ -29,6 +29,7 @@ RSpec.describe RuboCop::ConfigLoader do
 
       before { create_empty_file('dir/example.rb') }
 
+
       context 'but a config file exists in home directory' do
         before { create_empty_file('~/.rubocop.yml') }
 
