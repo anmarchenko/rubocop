@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# example_change
+
 require 'erb'
 require 'pathname'
 require 'yaml'
