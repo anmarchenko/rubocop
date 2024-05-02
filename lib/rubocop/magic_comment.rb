@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 # example change
+# example change 2
 
 module RuboCop
   # Parse different formats of magic comments.
