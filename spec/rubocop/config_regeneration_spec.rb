@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# change
+
 RSpec.describe RuboCop::ConfigRegeneration, :isolated_environment do
   include FileHelper
 
