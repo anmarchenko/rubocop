@@ -10,6 +10,8 @@ RSpec.describe RuboCop::ConfigRegeneration, :isolated_environment do
 
     context 'when no todo file exists' do
       it { is_expected.to eq(auto_gen_config: true) }
+
+
     end
 
     context 'when there is a blank todo file' do
