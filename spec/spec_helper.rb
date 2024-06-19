@@ -83,4 +83,4 @@ module ::RSpec
   end
 end
 
-WebMock.disable_net_connect!(:allow_localhost => true, :allow => /(datadoghq.eu)|(datad0g.com)/)
+WebMock.disable_net_connect!
