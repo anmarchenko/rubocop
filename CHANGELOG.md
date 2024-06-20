@@ -633,7 +633,7 @@
 
 * [#11386](https://github.com/rubocop/rubocop/pull/11386): Fix a false positive for `Style/OperatorMethodCall` when using anonymous forwarding. ([@koic][])
 * [#11409](https://github.com/rubocop/rubocop/issues/11409): Fix an incorrect autocorrect for `Style/HashSyntax` when using hash value omission and `EnforcedStyle: no_mixed_keys`. ([@koic][])
-* [#11405](https://github.com/rubocop/rubocop/issues/11405): Fix undefined method `range_between' for `Style/WhileUntilModifier`. ([@such][])
+* [#11405](https://github.com/rubocop/rubocop/issues/11405): Fix undefined method `range_between' for`Style/WhileUntilModifier`. ([@such][])
 * [#11374](https://github.com/rubocop/rubocop/pull/11374): Fix an error for `Style/StringHashKeys` when using invalid symbol in encoding UTF-8 as keys. ([@koic][])
 * [#11392](https://github.com/rubocop/rubocop/pull/11392): Fix an incorrect autocorrect for `Style/RedundantDoubleSplatHashBraces` using double splat in double splat hash braces. ([@koic][])
 * [#8990](https://github.com/rubocop/rubocop/issues/8990): Make `Style/HashEachMethods` aware of built-in `Thread.current`. ([@koic][])
@@ -2136,7 +2136,7 @@
 
 ### Changes
 
-* [#9091](https://github.com/rubocop/rubocop/pull/9091): Have `Naming/VariableNumber` accept _1, _2, ... ([@marcandre][])
+* [#9091](https://github.com/rubocop/rubocop/pull/9091): Have `Naming/VariableNumber` accept _1,_2, ... ([@marcandre][])
 * [#9087](https://github.com/rubocop/rubocop/pull/9087): Deprecate `EnforceSuperclass` module. ([@koic][])
 
 ## 1.4.1 (2020-11-23)
@@ -3176,7 +3176,7 @@
 * [#6649](https://github.com/rubocop/rubocop/pull/6649): `Layout/AlignHash` supports list of options. ([@stoivo][])
 * Add `IgnoreMethodPatterns` config option to `Style/MethodCallWithArgsParentheses`. ([@tejasbubane][])
 * [#7059](https://github.com/rubocop/rubocop/pull/7059): Add `EnforcedStyle` to `Layout/EmptyLinesAroundAccessModifier`. ([@koic][])
-* [#7052](https://github.com/rubocop/rubocop/issues/7052): Add `AllowComments` option to ` Lint/HandleExceptions`. ([@tejasbubane][])
+* [#7052](https://github.com/rubocop/rubocop/issues/7052): Add `AllowComments` option to `Lint/HandleExceptions`. ([@tejasbubane][])
 
 ### Bug fixes
 
@@ -3229,7 +3229,6 @@
 * [#6738](https://github.com/rubocop/rubocop/issues/6738): Prevent auto-correct conflict of `Style/Next` and `Style/SafeNavigation`. ([@hoshinotsuyoshi][])
 * [#6847](https://github.com/rubocop/rubocop/pull/6847): Fix `Style/BlockDelimiters` to properly check if the node is chained when `braces_for_chaining` is set. ([@att14][])
 
-
 ## 0.68.0 (2019-04-29)
 
 ### New features
@@ -3244,12 +3243,11 @@
 * [#6974](https://github.com/rubocop/rubocop/issues/6974): Make `Layout/FirstMethodArgumentLineBreak` aware of calling using `super`. ([@koic][])
 * Add new `Lint/HeredocMethodCallPosition` cop. ([@maxh][])
 
-
 ### Bug fixes
 
 * Do not annotate message with cop name in JSON output. ([@elebow][])
 * [#6914](https://github.com/rubocop/rubocop/issues/6914): Fix an error for `Rails/RedundantAllowNil` when with interpolations. ([@Blue-Pix][])
-* [#6888](https://github.com/rubocop/rubocop/issues/6888): Fix an error for `Rails/ActiveRecordOverride ` when no `parent_class` present. ([@diachini][])
+* [#6888](https://github.com/rubocop/rubocop/issues/6888): Fix an error for `Rails/ActiveRecordOverride` when no `parent_class` present. ([@diachini][])
 * [#6941](https://github.com/rubocop/rubocop/issues/6941): Add missing absence validations to `Rails/Validation`. ([@jmanian][])
 * [#6926](https://github.com/rubocop/rubocop/issues/6926): Allow nil values to unset config defaults. ([@dduugg][])
 * [#6946](https://github.com/rubocop/rubocop/pull/6946): Allow `Rails/ReflectionClassName` to use string interpolation for `class_name`. ([@r7kamura][])
@@ -3315,7 +3313,7 @@
 * [#6854](https://github.com/rubocop/rubocop/pull/6854): Mark Rails/LexicallyScopedActionFilter as unsafe and document risks. ([@urbanautomaton][])
 * [#5977](https://github.com/rubocop/rubocop/issues/5977): Warn for Performance Cops. ([@koic][])
 * [#6637](https://github.com/rubocop/rubocop/issues/6637): Move `LstripRstrip` from `Performance` to `Style` department and rename it to `Strip`. ([@anuja-joshi][])
-* [#6875](https://github.com/rubocop/rubocop/pull/6875): Mention block form of `Struct.new` in ` Style/StructInheritance`. ([@XrXr][])
+* [#6875](https://github.com/rubocop/rubocop/pull/6875): Mention block form of `Struct.new` in `Style/StructInheritance`. ([@XrXr][])
 * [#6871](https://github.com/rubocop/rubocop/issues/6871): Move `Performance/RedundantSortBy`, `Performance/UnneededSort` and `Performance/Sample` to the Style department. ([@bbatsov][])
 
 ## 0.66.0 (2019-03-18)
@@ -6169,7 +6167,7 @@
 * [#581](https://github.com/rubocop/rubocop/pull/581): Extracted a new cop `AmbiguousOperator` from `Syntax` cop. It checks for ambiguous operators in the first argument of a method invocation without parentheses. ([@yujinakayama][])
 * Extracted a new cop `AmbiguousRegexpLiteral` from `Syntax` cop. It checks for ambiguous regexp literals in the first argument of a method invocation without parentheses. ([@yujinakayama][])
 * Extracted a new cop `UselessElseWithoutRescue` from `Syntax` cop. It checks for useless `else` in `begin..end` without `rescue`. ([@yujinakayama][])
-* Extracted a new cop `InvalidCharacterLiteral` from `Syntax` cop. It checks for invalid character literals with a non-escaped whitespace character (e.g. `? `). ([@yujinakayama][])
+* Extracted a new cop `InvalidCharacterLiteral` from `Syntax` cop. It checks for invalid character literals with a non-escaped whitespace character (e.g. `?`). ([@yujinakayama][])
 * Removed `Syntax` cop from the configuration. It no longer can be disabled and it reports only invalid syntax offences. ([@yujinakayama][])
 * [#688](https://github.com/rubocop/rubocop/issues/688): Output from `rubocop --show-cops` now looks like a YAML configuration file. The `--show-cops` option takes a comma separated list of cops as optional argument. ([@jonas054][])
 * New cop `IndentationConsistency` extracted from `IndentationWidth`, which has checked two kinds of offences until now. ([@jonas054][])
@@ -7322,7 +7320,6 @@
 [@adithyabsk]: https://github.com/adithyabsk
 [@cteece]: https://github.com/ceteece
 [@taichi-ishitani]: https://github.com/taichi-ishitani
-[@cteece]: https://github.com/cteece
 [@TSMMark]: https://github.com/TSMMark
 [@caalberts]: https://github.com/caalberts
 [@kachick]: https://github.com/kachick
@@ -7383,7 +7380,6 @@
 [@si-lens]: https://github.com/si-lens
 [@akihikodaki]: https://github.com/akihikodaki
 [@epaew]: https://github.com/epaew
-[@isarcasm]: https://github.com/isarcasm
 [@noelblaschke]: https://github.com/noelblaschke
 [@KirIgor]: https://github.com/KirIgor
 [@tjschuck]: https://github.com/tjschuck
@@ -7402,7 +7398,6 @@
 [@jasondoc3]: https://github.com/jasondoc3
 [@ThHareau]: https://github.com/ThHareau
 [@ktopolski]: https://github.com/ktopolski
-[@Bhacaz]: https://github.com/Bhacaz
 [@naveg]: https://github.com/naveg
 [@lucthev]: https://github.com/lucthev
 [@nevans]: https://github.com/nevans
