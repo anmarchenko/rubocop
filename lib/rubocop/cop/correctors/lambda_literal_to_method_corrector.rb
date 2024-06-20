@@ -22,6 +22,8 @@ module RuboCop
           remove_arguments(corrector)
         end
 
+
+
         replace_selector(corrector)
 
         replace_delimiters(corrector)
