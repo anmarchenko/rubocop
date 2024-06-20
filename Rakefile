@@ -16,7 +16,10 @@ rescue Bundler::BundlerError => e
   warn 'Run `bundle install` to install missing gems'
   exit e.status_code
 end
+
 require 'rake'
+
+require 'datadog/ci/tasks'
 require 'rubocop/rake_task'
 
 Dir['tasks/**/*.rake'].each { |t| load t }

@@ -2,7 +2,7 @@
 
 module RuboCop
   module Cop
-    # This class autocorrects `#each` enumeration to `for` iteration.
+    # This class autocorrects `#each` enumeration to `for` iteration. fdfds
     class EachToForCorrector
       extend NodePattern::Macros
 
