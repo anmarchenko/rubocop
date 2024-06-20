@@ -23,6 +23,7 @@ module RuboCop
                  File.join(File.realpath(Dir.home), '.cache')
                end
 
+
       File.join(root, 'rubocop_cache')
     end
   end
