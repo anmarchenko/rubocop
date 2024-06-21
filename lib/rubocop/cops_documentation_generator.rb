@@ -8,8 +8,7 @@ class CopsDocumentationGenerator # rubocop:disable Metrics/ClassLength
   include ::RuboCop::Cop::Documentation
   # This class will only generate documentation for cops that belong to one of
   # the departments given in the `departments` array. E.g. if we only wanted
-  # documentation for Lint cops:
-  #
+  # documentation for Lint cops:  #
   #   CopsDocumentationGenerator.new(departments: ['Lint']).call
   #
   def initialize(departments: [])
