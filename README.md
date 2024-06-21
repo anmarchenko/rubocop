@@ -14,7 +14,7 @@
 > Role models are important. <br/>
 > -- Officer Alex J. Murphy / RoboCop
 
-**RuboCop** is a Ruby static code analyzer (a.k.a. `linter`) and code formatter. Out of the box it
+**RuboCop** is a Ruby static code analyzer (a.k.a. `linter`) and code formatter. Out of the box itf
 will enforce many of the guidelines outlined in the community [Ruby Style
 Guide](https://rubystyle.guide). Apart from reporting the problems discovered in your code,
 RuboCop can also automatically fix many of them for you.
@@ -37,7 +37,7 @@ Working on RuboCop is often fun, but it also requires a great deal of time and e
 **RuboCop**'s installation is pretty standard:
 
 ```sh
-$ gem install rubocop
+gem install rubocop
 ```
 
 If you'd rather install RuboCop using `bundler`, add a line for it in your `Gemfile` (but set the `require` option to `false`, as it is a standalone tool):
@@ -63,8 +63,8 @@ See [our versioning policy](https://docs.rubocop.org/rubocop/versioning.html) fo
 Just type `rubocop` in a Ruby project's folder and watch the magic happen.
 
 ```
-$ cd my/cool/ruby/project
-$ rubocop
+cd my/cool/ruby/project
+rubocop
 ```
 
 You can also use this magic in your favorite editor with RuboCop's [built-in LSP server](https://docs.rubocop.org/rubocop/usage/lsp.html).
@@ -91,7 +91,6 @@ If you use RuboCop in your project, you can include one of these badges in your 
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop/rubocop)
 
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-community-brightgreen.svg)](https://rubystyle.guide)
-
 
 Here are the Markdown snippets for the two badges:
 
