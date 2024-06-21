@@ -30,8 +30,6 @@ module RuboCop
 
     private
 
-
-
     def partition_patterns(patterns)
       patterns.each do |pattern|
         if pattern.is_a?(String) && !pattern.match?(/[*{\[?]/)

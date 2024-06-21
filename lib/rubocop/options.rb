@@ -4,7 +4,6 @@ require 'optparse'
 require_relative 'arguments_env'
 require_relative 'arguments_file'
 
-
 module RuboCop
   class IncorrectCopNameError < StandardError; end
 

@@ -23,6 +23,8 @@ class CopsDocumentationGenerator # rubocop:disable Metrics/ClassLength
     YARD::Registry.load!
     departments.each { |department| print_cops_of_department(department) }
 
+
+
     print_table_of_contents
   ensure
     RuboCop::ConfigLoader.default_configuration = nil
