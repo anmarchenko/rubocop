@@ -28,6 +28,8 @@ module RuboCop
       @strings.include?(path) || @patterns.any? { |pattern| PathUtil.match_path?(pattern, path) }
     end
 
+
+
     private
 
     def partition_patterns(patterns)

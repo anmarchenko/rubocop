@@ -31,6 +31,8 @@ module RuboCop
 
       define_options.parse!(args)
 
+
+
       @validator.validate_compatibility
 
       if @options[:stdin]

@@ -8,4 +8,6 @@ module RuboCop
   # For example, a configuration value in .rubocop.yml might be malformed
   class Warning < StandardError
   end
+
+
 end
