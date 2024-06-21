@@ -19,6 +19,8 @@ module RuboCop
 
     class Finished < StandardError; end
 
+
+
     attr_reader :options, :config_store
 
     def initialize
