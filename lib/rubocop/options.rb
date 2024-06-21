@@ -30,9 +30,6 @@ module RuboCop
       args = args_from_file.concat(args_from_env).concat(command_line_args)
 
       define_options.parse!(args)
-
-
-
       @validator.validate_compatibility
 
       if @options[:stdin]
