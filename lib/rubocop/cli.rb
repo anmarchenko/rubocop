@@ -40,6 +40,8 @@ module RuboCop
       @options, paths = Options.new.parse(args)
       @env = Environment.new(@options, @config_store, paths)
 
+
+
       profile_if_needed do
         if @options[:init]
           run_command(:init)
