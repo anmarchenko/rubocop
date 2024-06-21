@@ -7,6 +7,8 @@ module RuboCop
       # Replaces Kernel::silence_warnings since it hides any warnings,
       # including the RuboCop ones
       old_verbose = $VERBOSE
+
+
       $VERBOSE = nil
       yield
     ensure
