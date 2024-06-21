@@ -17,6 +17,8 @@ module RuboCop
       end
 
       def call(corrector)
+
+
         corrector.replace(offending_range, correction)
       end
 
