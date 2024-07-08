@@ -30,8 +30,6 @@ group :test do
   gem 'bigdecimal', platform: :mri
   gem 'webmock', require: false
 
-
-
   gem 'parallel_tests'
 
   gem "datadog-ci", :path => "../../p/datadog-ci-rb"
