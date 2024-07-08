@@ -49,9 +49,6 @@ RSpec.configure do |config|
 
   config.include RuboCop::RSpec::ExpectOffense
 
-  config.order = :random
-  Kernel.srand config.seed
-
   config.expect_with :rspec
   config.mock_with :rspec
 
