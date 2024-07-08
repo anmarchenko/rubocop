@@ -19,7 +19,6 @@ end
 
 require 'rake'
 
-require 'datadog/ci/tasks'
 require 'rubocop/rake_task'
 
 Dir['tasks/**/*.rake'].each { |t| load t }
