@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 RSpec.describe RuboCop::Cop::Lint::UselessAssignment, :config do
+  it 'is a new test' do
+    expect(1+1).to eq(2)
+  end
   context 'when a variable is assigned and assigned again in a modifier condition' do
     it 'accepts with parentheses' do
       expect_no_offenses(<<~RUBY)
