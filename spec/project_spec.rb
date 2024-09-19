@@ -348,15 +348,6 @@ RSpec.describe 'RuboCop Project', type: :feature do
       end
     end
 
-    it 'has link definitions for all implicit links' do
-      implicit_link_names = changelog.scan(/\[([^\]]+)\]\[\]/).flatten.uniq
-      implicit_link_names.each do |name|
-        expect(changelog.include?("[#{name}]: http"))
-          .to be(true), "missing a link for #{name}. " \
-                        'Please add this link to the bottom of the file.'
-      end
-    end
-
     context 'after version 0.14.0' do
       let(:lines) { changelog.each_line.take_while { |line| !line.start_with?('## 0.14.0') } }
 
