@@ -538,42 +538,6 @@ RSpec.describe RuboCop::Cop::Lint::UselessAssignment, :config do
     end
   end
 
-  context "when a variable is reassigned in loop body but won't " \
-          'be referenced either next iteration or loop condition' do
-    it 'registers an offense' do
-      pending 'Requires advanced logic that checks whether the return ' \
-              'value of an operator assignment is used or not.'
-      expect_offense(<<~RUBY)
-        def some_method
-          total = 0
-          foo = 0
-
-          while total < 100
-            total += 1
-            foo += 1
-            ^^^ Useless assignment to variable - `foo`.
-          end
-
-          total
-        end
-      RUBY
-
-      expect_correction(<<~RUBY)
-        def some_method
-          total = 0
-          foo = 0
-
-          while total < 100
-            total += 1
-            foo = 1
-          end
-
-          total
-        end
-      RUBY
-    end
-  end
-
   context 'when a referenced variable is reassigned ' \
           'but not re-referenced in a method defined in loop' do
     it 'registers an offense' do
