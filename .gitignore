@@ -74,3 +74,4 @@ bin/*
 tmp/*
 test.rb
 log
+*.log
