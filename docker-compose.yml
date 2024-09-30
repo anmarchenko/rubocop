@@ -1,0 +1,24 @@
+services:
+  rubocop:
+    build:
+      context: .
+    environment:
+      - DD_AGENT_HOST=ddagent
+      - DD_PROFILING_ENABLED=true
+    volumes:
+      - .:/app
+  ddagent:
+    image: datadog/agent
+    environment:
+      - DD_APM_ENABLED=true
+      - DD_BIND_HOST=0.0.0.0
+      - "DD_API_KEY=${DD_API_KEY}"
+      - DD_SITE=datadoghq.eu
+      - DD_HOSTNAME=datadog-ci-rubocop-test-runner-local
+    expose:
+      - "8125/udp"
+      - "8126"
+    volumes:
+      - ddagent_var_run:/var/run/datadog
+volumes:
+  ddagent_var_run:

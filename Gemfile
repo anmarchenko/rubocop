@@ -32,8 +32,11 @@ group :test do
 
   gem 'parallel_tests'
 
-  gem "datadog-ci", :path => "../../p/datadog-ci-rb"
-  gem "datadog", :path => "../../p/dd-trace-rb"
+  # gem "datadog-ci", :path => "../../p/datadog-ci-rb"
+  # gem "datadog", :path => "../../p/dd-trace-rb"
+  #
+  # use this for profiling tests
+  gem "datadog-ci", github: "DataDog/datadog-ci-rb", ref: "main"
 
   gem "ci-queue"
   gem "redis"
