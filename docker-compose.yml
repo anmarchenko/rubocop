@@ -5,6 +5,7 @@ services:
     environment:
       - DD_AGENT_HOST=ddagent
       - DD_PROFILING_ENABLED=true
+      - DD_PROFILING_ALLOCATION_ENABLED=true
     volumes:
       - .:/app
   ddagent:
