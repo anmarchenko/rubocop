@@ -36,7 +36,7 @@ group :test do
   # gem "datadog", :path => "../../p/dd-trace-rb"
   #
   # use this for profiling tests
-  gem "datadog-ci", github: "DataDog/datadog-ci-rb", ref: "main"
+  gem "datadog-ci", github: "DataDog/datadog-ci-rb", ref: "anmarchenko/code_coverage_performance_optimisation"
 
   gem "ci-queue"
   gem "redis"
