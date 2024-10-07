@@ -12,6 +12,8 @@ RSpec.describe RuboCop::Cop::Lint::UselessAssignment, :config do
       RUBY
     end
 
+
+
     it 'accepts without parentheses' do
       expect_no_offenses(<<~RUBY)
         a = nil
