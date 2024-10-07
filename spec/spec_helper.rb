@@ -79,4 +79,4 @@ module ::RSpec
   end
 end
 
-# WebMock.disable_net_connect!
+WebMock.disable_net_connect!
