@@ -17,9 +17,11 @@ require "datadog/ci"
 require "datadog/auto_instrument"
 
 Datadog.configure do |c|
+  c.env = "ci"
   c.service = "rubocop"
   c.ci.enabled = true
   c.ci.instrument :rspec
+  # c.runtime_metrics.enabled = true
 end
 
 require 'rubocop'

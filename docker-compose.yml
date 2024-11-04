@@ -3,8 +3,9 @@ services:
     build:
       context: .
     environment:
+      - DD_ENV=ci
       - DD_AGENT_HOST=ddagent
-      - DD_PROFILING_ENABLED=true
+      - DD_PROFILING_ENABLED=false
       - DD_PROFILING_ALLOCATION_ENABLED=true
     volumes:
       - .:/app
@@ -16,6 +17,8 @@ services:
       - "DD_API_KEY=${DD_API_KEY}"
       - DD_SITE=datadoghq.eu
       - DD_HOSTNAME=datadog-ci-rubocop-test-runner-local
+      - DD_DOGSTATSD_NON_LOCAL_TRAFFIC=true
+      - DD_ENV=ci
     expose:
       - "8125/udp"
       - "8126"

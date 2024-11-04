@@ -38,6 +38,8 @@ group :test do
   # use this for profiling tests
   # gem "datadog-ci", github: "DataDog/datadog-ci-rb", ref: "main"
 
+  gem "dogstatsd-ruby"
+
   gem "ci-queue"
   gem "redis"
 end
