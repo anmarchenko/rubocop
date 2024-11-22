@@ -27,6 +27,7 @@ module RuboCop
       #   # bad
       #   User
       #
+      #
       #   # bad
       #   User::Login
       #
