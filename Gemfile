@@ -18,7 +18,6 @@ gem 'rubocop-rspec', '~> 2.25.0'
 # https://github.com/codeclimate/test-reporter/issues/418
 gem 'simplecov'
 gem 'stackprof', platform: :mri
-gem 'test-queue'
 gem 'yard', '~> 0.9'
 
 group :test do
