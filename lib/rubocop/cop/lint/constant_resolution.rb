@@ -23,6 +23,7 @@ module RuboCop
       # @example
       #   # By default checks every constant
       #
+      #
       #   # bad
       #   User
       #
