@@ -15,6 +15,7 @@ module RuboCop
       typed: 'typed'
     }.freeze
 
+
     # Detect magic comment format and pass it to the appropriate wrapper.
     #
     # @param comment [String]
