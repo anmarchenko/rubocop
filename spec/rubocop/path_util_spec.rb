@@ -13,6 +13,7 @@ RSpec.describe RuboCop::PathUtil do
 
     if RuboCop::Platform.windows?
       it 'works for different drives' do
+        # a new comment
         expect(described_class.relative_path('D:/foo/bar', 'C:/foo')).to eq('D:/foo/bar')
       end
 
