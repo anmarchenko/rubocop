@@ -35,6 +35,7 @@ RSpec.describe RuboCop::PathUtil do
 
     if RuboCop::Platform.windows?
       it 'returns a truthy value for a path beginning with an upper case drive letter' do
+        # comment
         expect(described_class.absolute?('C:/Users/foo')).to be_truthy
       end
 
