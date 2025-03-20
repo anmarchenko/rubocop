@@ -18,7 +18,6 @@ RSpec.describe RuboCop::PathUtil do
       end
 
       it 'works for the same drive' do
-        # another new comment
         expect(described_class.relative_path('D:/foo/bar', 'D:/foo')).to eq('bar')
       end
     end
