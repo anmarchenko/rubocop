@@ -26,7 +26,6 @@ RSpec.describe RuboCop::PathUtil do
 
   describe '#absolute?' do
     it 'returns a truthy value for a path beginning with slash' do
-      # added a comment here
       expect(described_class.absolute?('/Users/foo')).to be_truthy
     end
 
