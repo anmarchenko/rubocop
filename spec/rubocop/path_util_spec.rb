@@ -62,6 +62,7 @@ RSpec.describe RuboCop::PathUtil do
     end
 
     it 'matches dir/** for hidden file' do
+
       expect(described_class.match_path?('dir/**', 'dir/.hidden_file')).to be(true)
     end
 
