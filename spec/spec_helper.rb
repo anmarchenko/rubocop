@@ -16,13 +16,6 @@ end
 require "datadog/ci"
 require "datadog/auto_instrument"
 
-Datadog.configure do |c|
-  c.service = "rubocop"
-  c.ci.enabled = true
-  c.ci.itr_enabled = true
-  c.ci.instrument :rspec
-end
-
 require 'rubocop'
 require 'rubocop/cop/internal_affairs'
 require 'rubocop/server'
