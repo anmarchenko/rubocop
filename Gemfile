@@ -13,6 +13,11 @@ gem 'rspec', '~> 3.7'
 gem 'rubocop-performance', '~> 1.19.0'
 gem 'rubocop-rake', '~> 0.6.0'
 gem 'rubocop-rspec', '~> 2.25.0'
+# RuboCop 1.57.2 predates newer plugin releases allowed by rubocop-rspec's
+# open-ended compatible constraints. Keep this playground's test graph on the
+# releases used by the upstream suite at this revision.
+gem 'rubocop-capybara', '= 2.17.1'
+gem 'rubocop-factory_bot', '= 2.22.0'
 # Workaround for cc-test-reporter with SimpleCov 0.18.
 # Stop upgrading SimpleCov until the following issue will be resolved.
 # https://github.com/codeclimate/test-reporter/issues/418
@@ -38,7 +43,11 @@ group :test do
 end
 
 local_ast = File.expand_path('../rubocop-ast', __dir__)
-gem 'rubocop-ast', path: local_ast if Dir.exist? local_ast
+if Dir.exist? local_ast
+  gem 'rubocop-ast', path: local_ast
+else
+  gem 'rubocop-ast', '= 1.30.0'
+end
 
 local_gemfile = File.expand_path('Gemfile.local', __dir__)
 eval_gemfile local_gemfile if File.exist?(local_gemfile)
